@@ -1,0 +1,603 @@
+:root {
+    --maincolor: #dadada;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ---------------------------- N A V B A R ----------------------- */
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    height: 80px;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    z-index: 3;
+}
+
+.navbar .logo {
+    font-family: 'Rubik Marker Hatch', cursive;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 1.3rem;
+    /* background-color: beige; */
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbar label i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#click-menu-btn,
+.navbar .menu-btn {
+    display: none;
+}
+
+/* ---------------------- A K H I R   N A V B A R ---------------- */
+
+
+
+
+
+
+/* ------------------------- H E A D E R -------------------------*/
+.container {
+    position: relative;
+}
+
+.header {
+    margin-top: 80px;
+    padding: 0 10% 0 10%;
+    display: grid;
+    height: calc(100vh - 80px);
+    grid-template-areas:
+        "text-profil foto-profil";
+    background-color: var(--maincolor);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.text-profil {
+    grid-area: text-profil;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center center;
+    gap: 10px;
+}
+
+.text-profil p {
+    font-size: 1.5rem;
+}
+
+.text-profil h2 {
+    font-size: 2rem;
+}
+
+.text-profil button {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 200px;
+    background-color: black;
+    padding: 5px;
+    text-align: center;
+}
+
+.text-profil button:hover {
+    box-shadow: 0px 0px 6px 4px #0044ff7e;
+}
+
+.text-profil button a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.foto-profil {
+    grid-area: foto-profil;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    cursor: pointer;
+    transition: all 2s;
+    position: relative;
+}
+
+.foto-profil .fp {
+    display: flex;
+    height: 80%;
+    z-index: 0;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.foto-profil:hover {
+    transform: scale(1.1);
+}
+
+.foto-profil .bg-fp {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+}
+
+/* -------------------- A K H I R   H E A D E R -----------------*/
+
+
+
+
+
+
+/* ----------------------- A B O U T --------------------------- */
+.about {
+    padding: 100px 10% 100px 10%;
+    box-sizing: border-box;
+}
+
+.about h2 {
+    text-align: center;
+    margin: 0 80px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.about .sub-heading {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    border: 3px solid black;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), inset 1px 1px 3px rgba(161, 161, 161, 0.8);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 10px 6px rgba(4, 20, 243, 0.5);
+}
+
+.card img {
+    height: 250px;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+
+.card .content {
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.card button {
+    font-size: 1.4rem;
+    padding: 5px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8), inset 1px 1px 3px rgba(161, 161, 161, 0.8);
+}
+
+/* --------------------- */
+
+.pribadi {
+    margin: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+        "experience shortskill"
+        "experience hardskill";
+    /* border: 2px solid black; */
+    gap: 70px;
+}
+
+.pribadi .experience {
+    grid-area: experience;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    place-content: center;
+    width: 90%;
+}
+
+.pribadi ul li {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.pribadi p {
+    font-size: 1.2rem;
+}
+
+.pribadi .experience .bg-experience {
+    z-index: -1;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+}
+
+.pribadi .shortskill {
+    grid-area: shortskill;
+    place-self: center;
+    width: 90%;
+
+}
+
+.pribadi .hardskill {
+    grid-area: hardskill;
+    width: 100%;
+    place-self: center;
+}
+
+.pribadi .hardskill li {
+    margin: 20px 0;
+    list-style: none;
+}
+
+.pribadi .hardskill li .bar {
+    background-color: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25);
+}
+
+.pribadi .hardskill li .bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 38, 255, 0.25), 0 10px 10px rgba(0, 66, 247, 0.22);
+}
+
+.pribadi .hardskill li .bar span {
+    height: 20px;
+    float: left;
+    border-radius: 10px;
+    background: linear-gradient(145deg, rgb(10, 91, 241)0%, rgb(190, 182, 182)100%);
+    transition: 1s all;
+}
+
+.pribadi .hardskill li .bar .html {
+    width: 60%;
+    animation: html 3s;
+}
+
+.pribadi .hardskill li .bar .css {
+    width: 50%;
+    animation: css 3s;
+}
+
+.pribadi .hardskill li .bar .javascript {
+    width: 20%;
+    animation: javascript 3s;
+}
+
+/* ----------------- A K H I R   A B O U T -------------------- */
+
+
+
+
+
+/* ---------------------- G A L L E R Y ----------------------- */
+.gallery {
+    background-color: var(--maincolor);
+    padding: 100px 10%;
+}
+
+.gallery h2 {
+    text-align: center;
+    padding: 0 0 50px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.gallery .content {
+    box-sizing: border-box;
+    display: flex;
+    border: 10px solid white;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery .content img {
+    justify-self: center;
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+}
+
+/* ----------------- A K H I R   G A L L E R Y ---------------- */
+
+
+
+
+
+/* ---------------------- C O N T A C T ----------------------- */
+.contacts {
+    padding: 100px 10%;
+}
+
+.contacts h2 {
+    text-align: center;
+    padding: 0 0 50px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.contact {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.contact .message {
+    padding: 0 10% 0 10%;
+}
+
+.contact .message .input-box input,
+.contact .message .input-box textarea {
+    width: 100%;
+    display: block;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.contact .message .input-box textarea {
+    border: 2px solid black;
+    height: 6rem;
+}
+
+.contact .message button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: rgb(116, 116, 201);
+    color: white;
+}
+
+.contact .map {
+    display: grid;
+    justify-content: center;
+}
+
+.contact .map iframe {
+    place-self: center;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.contact .map p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* ----------------- A K H I R   C O N T A C T ---------------- */
+
+
+
+
+
+/* ------------------------ F O O T E R ----------------------- */
+.footer {
+    background-color: black;
+    padding: 50px 10% 50px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    color: white;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer .layanan,
+.footer .hk,
+.footer .links {
+    place-self: center;
+}
+
+.footer li,
+.footer a {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(204, 197, 197);
+}
+
+.cp {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 50px;
+}
+
+/* ------------------- A K H I R   F O O T E R ---------------- */
+
+
+
+
+
+
+/* ---------- QUESTION ---------- */
+.question i {
+    position: fixed;
+    font-size: 3rem;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 3px solid black;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.question i:hover {
+    color: rgb(26, 25, 27);
+    background-color: white;
+    border: 3px solid white;
+
+}
+
+/* -------- AKHIR QUESTION ------- */
+
+
+
+
+
+
+
+/* ------------------------------------- RESPONSIVE ------------------------------------- */
+@media (max-width:960px) {
+    .pribadi {
+        justify-content: center;
+        place-items: center;
+        grid-template-areas:
+            "experience"
+            "shortskill"
+            "hardskill";
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar .menu-btn {
+        display: block;
+    }
+
+    #click-menu-btn:checked~.menu-btn i::before {
+        content: "\f00d";
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-align: center;
+        transition: all .5s;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #click-menu-btn:checked~.nav-link {
+        right: 0%;
+        opacity: 1;
+    }
+
+    .navbar ul li {
+        margin: 50px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5rem;
+    }
+
+    .question i {
+        font-size: 2.5rem;
+    }
+
+    .pribadi {
+        justify-content: center;
+        place-items: center;
+        grid-template-areas:
+            "experience"
+            "shortskill"
+            "hardskill";
+    }
+
+    .gallery .content img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width:560px) {
+    .about .pribadi li {
+        font-size: 1.2rem;
+    }
+
+    .about h2,
+    .gallery h2,
+    .contacts h2 {
+        font-size: 2rem;
+    }
+
+    .about h3,
+    .about .sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .text-profil {
+        place-content: center;
+        place-items: center;
+        text-align: center;
+    }
+
+    .foto-profil {
+        display: none;
+    }
+
+    .question i {
+        font-size: 2rem;
+    }
+
+    .gallery .content img {
+        width: 100px;
+        height: 100px;
+    }
+}
